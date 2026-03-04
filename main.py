@@ -1,9 +1,11 @@
 from cargando import mostrar_progreso , mostrar_saliendo
 from ansi_colores import *
+from limpiar import *
 
 historial=[]
 
 while True:
+    limpiar_pantalla()
     print(f"{BG_GREEN}-------------------------------------{RESET}")
     print(f"{BG_GREEN}Bienvenido a la calculadora en Python{RESET}")
     print(f"{BG_GREEN}-------------------------------------{RESET}")
@@ -19,9 +21,11 @@ while True:
     print(f"10. Ver historial{RESET}")
     print(f"{RED}11. Salir{RESET}")
     operacion = int(input("Ingrese el número de la operación que desea realizar: \n"))
+    
 
     #Suma
     if operacion == 1:
+        limpiar_pantalla()
         print("Ingrese el primer número:")
         num1 = float(input())
         print("Ingrese el segundo número:")
@@ -38,6 +42,7 @@ while True:
 
     #Resta    
     elif operacion == 2:
+        limpiar_pantalla()
         print("Ingrese el primer número:")
         num1 = float(input())
         print("Ingrese el segundo número:")
@@ -54,6 +59,7 @@ while True:
 
     #Multiplicación   
     elif operacion == 3:
+        limpiar_pantalla()
         print("Ingrese el primer número:")
         num1 = float(input())
         print("Ingrese el segundo número:")
@@ -70,6 +76,7 @@ while True:
 
     #División   
     elif operacion == 4:
+        limpiar_pantalla()
         print("Ingrese el primer número:")
         num1 = float(input())
         print("Ingrese el segundo número:")
@@ -89,6 +96,7 @@ while True:
 
     #Potenciación        
     elif operacion == 5:
+        limpiar_pantalla()
         print("Ingrese la base:")
         base = float(input())
         print("Ingrese el exponente:")
@@ -105,6 +113,7 @@ while True:
 
     #Raíz cuadrada
     elif operacion == 6:
+        limpiar_pantalla()
         print("Ingrese el número:")
         num = float(input())
         if num >= 0:
@@ -122,6 +131,7 @@ while True:
 
     #Módulo        
     elif operacion == 7:
+        limpiar_pantalla()
         print("Ingrese el primer número:")
         num1 = float(input())
         print("Ingrese el segundo número:")
@@ -137,7 +147,8 @@ while True:
         historial.append(f"Suma: {num1} + {num2} = {resultado}")
 
     #Porcentaje   
-    elif operacion == 8:       
+    elif operacion == 8:
+        limpiar_pantalla()   
         print("Ingrese el número:")
         num1 = float(input())
         print("Ingrese el porcentaje:")
@@ -154,6 +165,7 @@ while True:
 
     #Promedio
     elif operacion == 9:
+        limpiar_pantalla()
         print("Ingrese el primer número:")
         num1 = int(input())
         print("Ingrese el segundo número:")
@@ -171,6 +183,7 @@ while True:
 
     #Mirar Historial
     elif operacion == 10:
+        limpiar_pantalla()
         if historial:
             print("Historial de operaciones:")
             for i, operacion in enumerate(historial, 1):
