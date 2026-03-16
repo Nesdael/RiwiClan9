@@ -24,7 +24,7 @@ while continuar == "si":
         clientes_aten += 1
         cono_veces += cantidad
         total_vendido += cantidad
-        total_pagar= cono * cantidad
+        total_pagar = cono * cantidad
         print(f"Pediste el producto cono y fueron {cantidad} el precio a pagar es {total_pagar}")
         
     elif producto == 2:
@@ -32,7 +32,7 @@ while continuar == "si":
         clientes_aten += 1
         vaso_veces += cantidad
         total_vendido += cantidad
-        total_pagar= vaso * cantidad
+        total_pagar = vaso * cantidad
         print(f"Pediste el producto cono y fueron {cantidad} el precio a pagar es {total_pagar}")
         
     elif producto == 3:
@@ -40,11 +40,12 @@ while continuar == "si":
         clientes_aten += 1
         banana_split_veces += cantidad
         total_vendido += cantidad
-        total_pagar= banana_split * cantidad
+        total_pagar = banana_split * cantidad
         print(f"Pediste el producto cono y fueron {cantidad} el precio a pagar es {total_pagar}")
         
     else:
         print("Digite un valor valido (1/2/3)")
+        print("Intente nuevamente")
         continue
               
     continuar = input("Desea continuar? (si/no)\n").lower()     
