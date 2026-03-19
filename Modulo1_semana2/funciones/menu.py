@@ -1,17 +1,14 @@
 from colores import *
 from limpiar_pantalla import limpiar_pantalla
-from agregar_producto import agregar_producto
-
-
-
-#if __name__ == "__main__":
-#    menu()
+from funciones import agregar_producto, mostrar_inventario, calcular_estadisticas
 
 
 
 def menu():
     
-    while True:
+    continuar = "si"
+    
+    while continuar == "si":
         limpiar_pantalla()
         
         print(f"{F_VERDE}--- Menu de inventario ---{RESET}")
@@ -29,11 +26,14 @@ def menu():
             agregar_producto()
             
         elif opcion == 2:
-            print("xd")
+            limpiar_pantalla()
+            print("Haz elegido la opcion mostrar producto")
+            mostrar_inventario()
             
-
         elif opcion == 3:
-            print("sad") 
+            limpiar_pantalla()
+            print("Calculando estadisticas... ")
+            calcular_estadisticas()
 
         elif opcion == 4:
             print("Ha salido del programa") 
@@ -43,6 +43,11 @@ def menu():
             print("Ingrese una opcion valida")
             input("Oprima cualquier boton para intentar de nuevo...")
             continue    
+        
+        limpiar_pantalla()
+        continuar = input("Desea hacer otra consulta? (Si/No)\n").lower()
+        print("Hasta luego")
+        
         
            
         
